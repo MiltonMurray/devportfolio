@@ -34,3 +34,14 @@ gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
+
+var format = require('gulp-format');
+gulp.task('check-format', function() {
+  return gulp.src('*.js')
+    .pipe(format.check());
+});
+gulp.task('format',function(){
+  return gulp.src('*.js')
+  .pipe(format());
+});
+
