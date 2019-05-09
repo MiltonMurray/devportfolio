@@ -30,7 +30,25 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./css'));
 });
 
+<<<<<<< HEAD
 gulp.task('watch', function() {
     gulp.watch('js/scripts.js', gulp.series('scripts'));
     gulp.watch('scss/styles.scss', gulp.series('styles'));
 });
+=======
+gulp.task('watch', ['scripts', 'styles'], function() {
+    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('scss/*.scss', ['styles']);
+});
+
+var format = require('gulp-format');
+gulp.task('check-format', function() {
+  return gulp.src('*.js')
+    .pipe(format.check());
+});
+gulp.task('format',function(){
+  return gulp.src('*.js')
+  .pipe(format());
+});
+
+>>>>>>> 4e500274f7bccb557d681dedb536c930caa2520e
