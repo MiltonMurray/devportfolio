@@ -26,7 +26,17 @@
         11. Optional Section Styles
         12. Media Queries
 */
-<<<<<<< HEAD
+@import '../../../../codyhouse-framework/main/assets/css/_global.scss'; // ⚠️ make sure to import the CodyHouse framework
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700'); // custom font
+
+// -------------------------------------------------
+
+// Responsive Vertical Timeline - by CodyHouse.co
+
+// -------------------------------------------------
+
+
+
 .avatar {
     background-image: url("../images/avatar.jpg");
     height: 200px;
@@ -82,59 +92,6 @@
     /* Set a specific height */
     min-height: 400px; 
 
-=======
-/* Main */
-
-	
-.avatar {
-    background: url(https://raw.githubusercontent.com/MiltonMurray/miltonmurray.github.io/master/images/avatar.jpg) no-repeat scroll center top transparent;
-    height: 100px;
-    margin: auto;
-
-   
-    border-radius: 50%;
-    width: 100px;
-		}
-
-
-		
-.caption{
-    text-align: center;
-    padding-top: 200px;
-    
-}
-.border{
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-
-.bgimg2 {
-    
-    margin-left: -15px;
-    margin-right: -15px;
-    /* The image used */
-    background-image: url("../images/comp.jpg");
-    /* Set a specific height */
-    min-height: 400px; 
-    
-    /* Create the parallax scrolling effect */
-    position: relative;
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bgimg3 {
-    /* The image used */
-    background-image: url("../images/bg.jpg");
-    /* Set a specific height */
-    min-height: 400px; 
-
->>>>>>> 4e500274f7bccb557d681dedb536c930caa2520e
     /* Create the parallax scrolling effect */
     position: relative;
     
@@ -200,6 +157,9 @@ $text: #74808a;
     ----------------------------
 */
 
+.dark{
+    background-color: #282E34;
+}
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -596,11 +556,7 @@ footer {
     border-bottom: 1px solid $border;
 
     h2 {
-<<<<<<< HEAD
         color: #ffff;
-=======
-        color: #fffS;
->>>>>>> 4e500274f7bccb557d681dedb536c930caa2520e
     }
 }
 
