@@ -57,21 +57,20 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
+    <div id="about" onscroll="showContent()">
         <div class="container">
             <div class="row">
-                <div class="col-large">
+                <div class="col-md">
+                    <h2 class="heading" >About Me</h2>
+                </div>
+
+                 <div class="col-md-6">
                     <div class="avatar"></div>
                 </div>
-                <div class="col-large">
-                    <h2 class="heading" style="text-align: center">About Me</h2>
-                </div>
-                <div class="col-md" >
-                    <p style="text-align: center">
+                <div class="col-md-offset-6" >
+                    <p>
                             To say that I'm just programmer feels like a understatement because I strive to be much more than the average coder. I'm someone who takes solace in uncomfortable situations and rise against adversity. Everyday my goal is to improve who I was the day before.
-
-                            Outside of coding, I like vibing to music, running a basketball up and down the court, or meeting up with friends.
-                            
+                            Outside of coding, I like vibing to music, running a basketball up and down the court, or meeting up with friends.              
                             I'm always open to meeting new people so please feel free to say hello.
                     </p>
                 </div>
@@ -220,6 +219,36 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
-</body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+    
+    window.addEventListener("scroll",()=>{
+        if(window.scrollY > 200 && window.innerWidth > 750){
+            let tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration:750
+    })
 
+    tl.add({
+        targets: '#about p',
+        opacity: 1,
+        duration: 4000,
+    })
+
+    tl.add({       
+        targets: '.avatar',
+        opacity:1,
+        duration: 4000
+    
+    },'-=4000')
+    
+        }
+            console.log(window.scrollY);
+        
+            
+        })
+    </script>
+    
+</body>
 </html>

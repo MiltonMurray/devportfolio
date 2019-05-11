@@ -11,7 +11,6 @@
 */
 
 (function($) {
-
     // Remove no-js class
     $('html').removeClass('no-js');
 
@@ -75,7 +74,10 @@
         });
 
     });
-
+    if(window.innerWidth <=750){
+        $('#about p').css('opacity',1);
+        $('.avatar').css('opacity',1);
+    }
     // Open mobile menu
     $('#mobile-menu-open').click(function() {
         $('header, body').addClass('active');
@@ -118,3 +120,4 @@ function VerticalTimeline( element ) {
        })(i);
     }
  };
+

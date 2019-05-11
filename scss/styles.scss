@@ -26,8 +26,6 @@
         11. Optional Section Styles
         12. Media Queries
 */
-@import '../../../../codyhouse-framework/main/assets/css/_global.scss'; // ⚠️ make sure to import the CodyHouse framework
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700'); // custom font
 
 // -------------------------------------------------
 
@@ -46,11 +44,9 @@
     background-position: 50% 50%;
     border-radius: 50%;
     align-content: center;
-
-    
     margin-left: auto;
     margin-right: auto;
-    
+    opacity: 0  
 		}
 
 
@@ -531,14 +527,17 @@ footer {
 
 #about {
     text-align: center;
-    padding:  30px 15px;
+    padding:  15px 60px 60px 60px;
     border-bottom: 1px solid $border;
 
     h2 {
         color: $heading;
+        padding-bottom: 8px;
     }
 
     p {
+        opacity:0;
+        padding-top: 32px;
         color: $text;
         margin: 0;
     }
