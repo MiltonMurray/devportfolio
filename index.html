@@ -53,7 +53,12 @@
         <!-- End #lead-content -->
 
         <div id="lead-overlay"></div>
-
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
     </div>
     <!-- End #lead -->
 
@@ -81,20 +86,25 @@
     
     
     <div id="experience" class="dark">
+        <!--
         <div class="bg-img2">
             <div class="caption">
                 <span class="border" >EXPERIENCE</span>
             </div>     
-        </div>       
+        </div>      
+        -->
+        <h2 class="heading">Experience</h2>
         <div id="experience-timeline" >
-            <div data-date="September 2015 – September 2016">
+            <div data-date="September 2017 – Present">
                 <h3>USLI</h3>
                 <h4>IT - Development Intern</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
+                <ul>
+                    <li>Contributed in all levels of the development stack for key organizational tools</li>
+                    <li>Gained valuable technical and soft skills in a corporate environment</li>
+                    <li>Worked closely with multiple developers in planning during the development cycle</li>
+                </ul>   
             </div>
-            <div data-date="September 2015 – September 2016">
+            <div data-date="May 2017 – August 2017">
                 <h3>Grassroots Unwired</h3>
                 <h4>Software Engineer Intern</h4>
                  <ul>
@@ -173,7 +183,7 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
+            <form method="POST" action="https://formspree.io/miltonmurray@outlook.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
@@ -226,28 +236,23 @@
     window.addEventListener("scroll",()=>{
         if(window.scrollY > 200 && window.innerWidth > 750){
             let tl = anime.timeline({
-        easing: 'easeOutExpo',
-        duration:750
-    })
-
-    tl.add({
-        targets: '#about p',
-        opacity: 1,
-        duration: 4000,
-    })
-
-    tl.add({       
-        targets: '.avatar',
-        opacity:1,
-        duration: 4000
+                easing: 'easeOutExpo',
+                duration:750
+            })
+            tl.add({
+                targets: '#about p',
+                opacity: 1,
+                duration: 4000,
+            })
+            tl.add({       
+                targets: '.avatar',
+                opacity:1,
+                duration: 4000          
+            },'-=4000')
     
-    },'-=4000')
-    
-        }
-            console.log(window.scrollY);
-        
-            
-        })
+        }   
+    });
+
     </script>
     
 </body>
