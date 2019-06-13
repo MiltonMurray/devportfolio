@@ -104,7 +104,9 @@
 
 // Define base and accent colors
 $base-color: #3498db;
+$alt-color:#4a2b6a;
 $base-color-hover: darken($base-color, 10%);
+$alt-color-hover: darken($alt-color, 10%);
 
 // Define background colors
 $background: white;
@@ -186,7 +188,7 @@ body {
             h4 {
                 font-size: 1.2em;
                 font-weight: 300;
-                color: #7e8890;
+                color: #7e8890 ;
                 margin: 0 0 15px 0;
             }
 
@@ -284,9 +286,9 @@ header {
     color: $base-color;
     font-size: 1.5em;
     z-index: 20;
-    padding: 0 7px;
-    border-radius: 4px;
-    background: $background;
+    
+    
+    background: transparent;
     
 }
 
@@ -473,7 +475,9 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.3);
+    background: linear-gradient(120deg, rgba(#4a2b6a, 0.3) 30% , rgba($base-color-hover, 0.3) 50%);
+    //rgba($base-color-hover, 0.3);
+    //linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgb(189, 30, 30) 100%);
     z-index: 1;
 }
 
@@ -596,6 +600,8 @@ footer {
     padding: 15px;
     border-radius: 3px;
     text-align: left;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   
 
     h3 {
         font-size: 1.5em;
@@ -608,7 +614,7 @@ footer {
     h4 {
         font-size: 1.2em;
         font-weight: 300;
-        color: #7e8890;
+        color: #3498db;
         margin: 0 0 15px 0;
     }
 
@@ -732,8 +738,21 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
-}
+    @include transition();
 
+        &:hover {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+}
+.live {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+}
 .project-image {
     float: left;
 }
