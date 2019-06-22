@@ -427,9 +427,7 @@ footer {
 .background-alt {
     background: $background-alt;
 }
-.background-img{
-    background: url(../images/comp.jpg);
-}
+
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -439,9 +437,9 @@ footer {
 #lead {
     position: relative;
     height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    background: url(../images/road.jpg);
+    min-height: 100%;
+    max-height: auto;
+    background: url(../images/bg-large.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -992,9 +990,11 @@ svg{
 
     #lead {
         height: auto;
-        min-height: auto;
+        min-height: 100%;
         max-height: auto;
         padding: 100px 15px;
+        background: url(../images/bg-med.jpg);    
+        background-size: cover;
     }
 
     #lead-content {
@@ -1024,7 +1024,12 @@ svg{
 
 // Small Devices
 @media only screen and (max-width : 768px) {
-
+    #lead {
+        min-height: 100%;
+        max-height: auto;
+        background: url(../images/bg-small.jpg);
+        background-size: cover;    
+    }
     header {
         position: fixed;
         display: none;
