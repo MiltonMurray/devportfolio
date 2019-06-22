@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
+    <div id="mobile-menu-open">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
@@ -66,6 +66,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md">
+                        <svg fill="transparent" stroke="#3498db" stroke-width="2" width="60" height="60" viewBox="0 0 120 120" style="margin-bottom:-20px"
+                        xmlns="http://www.w3.org/2000/svg">
+                    
+                        <polygon points="60,30 90,90 30,90">
+                            <animateTransform attributeName="transform"
+                                                attributeType="XML"
+                                                type="rotate"
+                                                from="0 60 70"
+                                                to="360 60 70"
+                                                dur="10s"
+                                                repeatCount="indefinite"/>
+                        </polygon>
+                        </svg>
                     <h2 class="heading" >About Me</h2>
                 </div>
 
@@ -86,6 +99,19 @@
     
     
     <div id="experience" class="dark">
+            <svg fill="transparent" stroke="#3498db" stroke-width="2" width="60" height="60" viewBox="0 0 120 120" style="margin-bottom:-20px"
+            xmlns="http://www.w3.org/2000/svg">
+        
+            <polygon points="60,30 90,90 30,90">
+                <animateTransform attributeName="transform"
+                                    attributeType="XML"
+                                    type="rotate"
+                                    from="0 60 70"
+                                    to="360 60 70"
+                                    dur="10s"
+                                    repeatCount="indefinite"/>
+            </polygon>
+            </svg>
         <!--
         <div class="bg-img2">
             <div class="caption">
@@ -121,6 +147,19 @@
    
 
     <div id="projects" class="background">
+            <svg fill="transparent" stroke="#3498db" stroke-width="2" width="60" height="60" viewBox="0 0 120 120" style="margin-bottom:-20px"
+            xmlns="http://www.w3.org/2000/svg">
+        
+            <polygon points="60,30 90,90 30,90">
+                <animateTransform attributeName="transform"
+                                    attributeType="XML"
+                                    type="rotate"
+                                    from="0 60 70"
+                                    to="360 60 70"
+                                    dur="10s"
+                                    repeatCount="indefinite"/>
+            </polygon>
+            </svg>
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
@@ -167,8 +206,21 @@
     </div>
     <!-- End #projects -->
 
-    <div id="skills" class="dark">
+    <div id="skills" class="dark" >
         <div class=""> 
+                <svg fill="transparent" stroke="#3498db" stroke-width="2" width="60" height="60" viewBox="0 0 120 120" style="margin-bottom:-20px"
+                xmlns="http://www.w3.org/2000/svg">
+            
+                <polygon points="60,30 90,90 30,90">
+                    <animateTransform attributeName="transform"
+                                        attributeType="XML"
+                                        type="rotate"
+                                        from="0 60 70"
+                                        to="360 60 70"
+                                        dur="10s"
+                                        repeatCount="indefinite"/>
+                </polygon>
+                </svg>
         <h2 class="heading" style="color:white">Skills</h2>
         </div>
          <svg viewBox="0 0 128 128" >
@@ -255,8 +307,8 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script>
     
-    window.addEventListener("scroll",()=>{
-        if(window.scrollY > 200 && window.innerWidth > 750){
+    
+    if(window.scrollY > 180 || window.innerWidth <1050 ){
             let tl = anime.timeline({
                 easing: 'easeOutExpo',
                 duration:750
@@ -270,11 +322,27 @@
                 targets: '.avatar',
                 opacity:1,
                 duration: 4000          
-            },'-=4000')
-    
-        }   
-    });
-
+            },'-=4000')       
+        
+    } else{
+        window.addEventListener("scroll",()=>{
+            let tl = anime.timeline({
+                easing: 'easeOutExpo',
+                duration:750
+            })
+            tl.add({
+                targets: '#about p',
+                opacity: 1,
+                duration: 4000,
+            })
+            tl.add({       
+                targets: '.avatar',
+                opacity:1,
+                duration: 4000          
+            },'-=4000')       
+        });
+    } 
+   
     </script>
     
 </body>
